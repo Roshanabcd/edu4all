@@ -1,0 +1,73 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(7, 142, 221);
+  color: #ffffff;
+}
+
+.container{
+  position: relative;
+}
+
+.clock{
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255, 0.1);
+  border:2px solid rgb(255, 255, 255, 0.25);
+  box-shadow: rgba(180, 172, 172, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock span{
+  position: absolute;
+  transform: rotate(calc(30deg * var(--i)));
+  inset: 12px;
+  text-align: center;
+}
+
+.clock span b{
+  transform: rotate(calc(-30deg * var(--i)));
+  display: inline-block;
+  font-size: 24px;
+  padding: 5px;
+}
+
+.clock::before{
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  z-index: 2;
+}
+.hand{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hand i{
+  position: absolute;
+  background-color: var(--color);
+  width: var(--width);
+  height: var(--height);
+  border-radius: 8px;
+
+}
+a{
+  color: #ffffff;
+}

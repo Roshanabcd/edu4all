@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Playlist</title>
+    <style>
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 315px;
+            margin-bottom: 20px;
+        }
+        .playlistvideo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .playlistvideo title {
+            cursor: pointer;
+            margin: 5px;
+        }
+        .playlistvideo title:hover {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="video-container">
+            <iframe id="videoPlayer" width="560" height="315" src="https://www.youtube.com/embed/0nC8k5pP5gM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="playlistvideo">
+            <title onclick="changeVideo('https://www.youtube.com/embed/0nC8k5pP5gM')">Introduction</title>
+            <title onclick="changeVideo('https://www.youtube.com/embed/dQw4w9WgXcQ')">Installation</title>
+        </div>
+    </main>
+    <script>
+        function changeVideo(url) {
+            document.getElementById('videoPlayer').src = url;
+        }
+    </script>
+</body>
+</html>
